@@ -32,6 +32,8 @@ public class JpaTestApplication implements CommandLineRunner{
 		log.info("Predmet 20002L -> {}",p.toString());
 		p=repo.findByID(20003);
 		log.info("Predmet 20003L -> {}",p.toString());
+		p=repo.findByID(20004);
+		log.info("Predmet 20004L -> {}",p.toString());
 		
 		repo.delete(20003);
 		
