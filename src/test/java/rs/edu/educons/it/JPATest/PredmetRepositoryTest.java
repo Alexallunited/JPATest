@@ -17,17 +17,19 @@ import rs.edu.educons.it.JPATest.repository.PredmetRepository;
 @SpringBootTest
 public class PredmetRepositoryTest {
 
-	
-	private Logger logger=LoggerFactory.getLogger(this.getClass());
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	PredmetRepository pr;
-	
+
 	@Test
 	public void findByIDTest() {
 		logger.info("Started ID Test");
-		Predmet p=pr.findByID(20001);
+		Predmet p = pr.findByID(20001);
 		assertEquals("Ime1", p.getIme());
-		assertEquals("Opi1", p.getOpis());
+		assertEquals("Opis1", p.getOpis());
 	}
-
+	
+	
+	
+	
 }

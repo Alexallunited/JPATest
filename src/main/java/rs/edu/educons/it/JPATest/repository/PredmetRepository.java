@@ -14,32 +14,30 @@ public class PredmetRepository {
 
 	@Autowired
 	EntityManager eManager;
-	
+
 	public void delete(long id) {
-		
+
 		Predmet p = findByID(id);
 		eManager.remove(p);
-		
+
 	}
-	
+
 	public void save(Predmet p) {
-		
-		if (findByID(p.getId())==null) {
-			
+
+		if (findByID(p.getId()) == null) {
+
 			eManager.persist(p);
 		} else {
-			
+
 			eManager.merge(p);
 		}
-		
-		
+
 	}
+
 	public Predmet findByID(long id) {
-		
-		return eManager.find(Predmet.class,id );
-		
+
+		return eManager.find(Predmet.class, id);
+
 	}
-	
-	
-		
+
 }

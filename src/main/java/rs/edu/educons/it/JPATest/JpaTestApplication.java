@@ -11,14 +11,13 @@ import rs.edu.educons.it.JPATest.entity.Predmet;
 import rs.edu.educons.it.JPATest.repository.PredmetRepository;
 
 @SpringBootApplication
-public class JpaTestApplication implements CommandLineRunner{
+public class JpaTestApplication implements CommandLineRunner {
 
-	private Logger log=LoggerFactory.getLogger(this.getClass());
-	
+	private Logger log = LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
 	private PredmetRepository repo;
-	
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(JpaTestApplication.class, args);
 	}
@@ -26,14 +25,19 @@ public class JpaTestApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		Predmet p=repo.findByID(20001);
-		log.info("Predmet 20001L -> {}",p.toString());
-		p=repo.findByID(20002);
-		log.info("Predmet 20002L -> {}",p.toString());
-		p=repo.findByID(20003);
-		log.info("Predmet 20003L -> {}",p.toString());
+		Predmet p = repo.findByID(20001);
+		log.info("Predmet 20001L -> {}", p.toString());
+		p = repo.findByID(20002);
+		log.info("Predmet 20002L -> {}", p.toString());
+		p = repo.findByID(20003);
+		log.info("Predmet 20003L -> {}", p.toString());
+		p = repo.findByID(20004);
+		log.info("Predmet 20005L -> {}", p.toString());
+		p = repo.findByID(20005);
+		log.info("Predmet 20005L -> {}", p.toString());
 		
-		repo.delete(20003);
-		
+
+		//repo.delete(20003L);
+
 	}
 }
