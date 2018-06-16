@@ -1,5 +1,5 @@
-insert into predmet(id,ime,opis) values(20001,'Ime1','Opis1');
-insert into predmet(id,ime,opis) values(20002,'Ime2','Opis2');
-insert into predmet(id,ime,opis) values(20003,'Ime3','Opis3');
-insert into predmet(id,ime,opis) values(20004,'Ime4','Opis5');
+insert into predmet(id,ime,opis) values(201,'Baze Podataka','baze');
+insert into predmet(id,ime,opis) values(202,'Testiranje softvera','test');
+insert into predmet(id,ime,opis) values(203,'Mobilne aplikacije','mobilne');
+insert into predmet(id,ime,opis) values(204,'Informacioni sistemi','informacioni');
 

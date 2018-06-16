@@ -1,5 +1,9 @@
 package rs.edu.educons.it.JPATest.service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,20 +21,27 @@ public class PredmetService {
 		repo.save(p);
 	}
 	
-	public void delete(long id) {
+	public void delete(Integer id) {
 		
-		repo.delete(id);
+		repo.deleteById(id);
 	}
 	
-	public Predmet find(long id) {
+	public Optional<Predmet> find(Integer id) {
 		
-		return repo.findByID(id);
+		return repo.findById(id);
 	}
 	
 	public void edit(Predmet p) {
 		
 		repo.save(p);
 		
+	}
+	
+	public List<Predmet> findAll() {
+		
+		List<Predmet> predmeti = new ArrayList<>();
+		repo.findAll().forEach(predmeti::add);
+		return predmeti;
 	}
 	
 	

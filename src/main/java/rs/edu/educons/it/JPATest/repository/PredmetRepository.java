@@ -5,14 +5,15 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.CrudRepository;
 
 import rs.edu.educons.it.JPATest.entity.Predmet;
 
 @Repository
 @Transactional
-public class PredmetRepository {
+public interface PredmetRepository extends CrudRepository<Predmet, Integer>{
 
-	@Autowired
+	/*@Autowired
 	EntityManager eManager;
 	
 	public void delete(long id) {
@@ -40,6 +41,12 @@ public class PredmetRepository {
 		
 	}
 	
+	public Predmet[] findAll() {
+		
+		return eManager.fin;
+		
+	}
+	*/
 	
 		
 }

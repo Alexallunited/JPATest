@@ -1,5 +1,7 @@
 package rs.edu.educons.it.JPATest;
 
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,16 +28,16 @@ public class JpaTestApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		Predmet p=repo.findByID(20001);
+		Optional<Predmet> p=repo.findById(201);
 		log.info("Predmet 20001L -> {}",p.toString());
-		p=repo.findByID(20002);
+		p=repo.findById(202);
 		log.info("Predmet 20002L -> {}",p.toString());
-		p=repo.findByID(20003);
+		p=repo.findById(203);
 		log.info("Predmet 20003L -> {}",p.toString());
-		p=repo.findByID(20004);
+		p=repo.findById(204);
 		log.info("Predmet 20004L -> {}",p.toString());
 		
-		repo.delete(20003);
+		repo.deleteById(203);
 		
 	}
 }
