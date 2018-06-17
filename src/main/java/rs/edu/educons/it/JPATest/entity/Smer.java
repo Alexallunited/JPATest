@@ -3,55 +3,39 @@ package rs.edu.educons.it.JPATest.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
-public class Predmet {
-
+public class Smer {
+	
 	@Id
 	@GeneratedValue
 	private Integer id;
 	private String ime;
 	private String opis;
-
-	@ManyToOne
-	private Smer smer;
-
-	public Predmet() {
-
+	
+	public Smer() {
+		
 	}
-
-	public Predmet(String ime, String opis, Integer smerId) {
+	
+	public Smer(Integer id, String ime, String opis) {
 		super();
+		this.id = id;
 		this.ime = ime;
 		this.opis = opis;
-		
-		this.smer = new Smer(smerId, "", "");
 	}
-
-	public Smer getSmer() {
-		return smer;
-	}
-
-	public void setSmer(Smer smer) {
-		this.smer = smer;
-	}
-
 	public String getIme() {
 		return ime;
 	}
-
 	public void setIme(String ime) {
 		this.ime = ime;
 	}
-
 	public String getOpis() {
 		return opis;
 	}
-
 	public void setOpis(String opis) {
 		this.opis = opis;
 	}
+	
 
 	public Integer getId() {
 		return id;
@@ -63,7 +47,9 @@ public class Predmet {
 
 	@Override
 	public String toString() {
-		return "Predmet [id=" + id + ", ime=" + ime + ", opis=" + opis + "]";
+		return "Predmet [id=" + id + ", ime=" + ime + ", opis=" + opis +"]";
 	}
+	
+	
 
 }

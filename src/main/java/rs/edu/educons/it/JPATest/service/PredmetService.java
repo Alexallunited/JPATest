@@ -14,33 +14,33 @@ import rs.edu.educons.it.JPATest.repository.PredmetRepository;
 public class PredmetService {
 	
 	@Autowired
-	private PredmetRepository repo;
+	private PredmetRepository predmetRepo;
 	
 	
-	public void add(Predmet p) {
-		repo.save(p);
+	public void addPredmet(Predmet p) {
+		predmetRepo.save(p);
 	}
 	
 	public void delete(Integer id) {
 		
-		repo.deleteById(id);
+		predmetRepo.deleteById(id);
 	}
 	
 	public Optional<Predmet> find(Integer id) {
 		
-		return repo.findById(id);
+		return predmetRepo.findById(id);
 	}
 	
-	public void edit(Predmet p) {
+	public void update(Predmet p) {
 		
-		repo.save(p);
+		predmetRepo.save(p);
 		
 	}
 	
-	public List<Predmet> findAll() {
+	public List<Predmet> findAll(Integer smerId) {
 		
 		List<Predmet> predmeti = new ArrayList<>();
-		repo.findAll().forEach(predmeti::add);
+		predmetRepo.findBySmerId(smerId).forEach(predmeti::add);
 		return predmeti;
 	}
 	
