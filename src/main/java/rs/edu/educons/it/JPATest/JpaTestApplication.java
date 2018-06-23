@@ -1,5 +1,7 @@
 package rs.edu.educons.it.JPATest;
 
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,7 @@ public class JpaTestApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 		Predmet p = repo.findByID(20001);
 		log.info("Predmet 20001L -> {}", p.toString());
 		p = repo.findByID(20002);
@@ -35,6 +38,18 @@ public class JpaTestApplication implements CommandLineRunner {
 		log.info("Predmet 20005L -> {}", p.toString());
 		p = repo.findByID(20005);
 		log.info("Predmet 20005L -> {}", p.toString());
+=======
+		Optional<Predmet> p=repo.findById(201);
+		log.info("Predmet 20001L -> {}",p.toString());
+		p=repo.findById(202);
+		log.info("Predmet 20002L -> {}",p.toString());
+		p=repo.findById(203);
+		log.info("Predmet 20003L -> {}",p.toString());
+		p=repo.findById(204);
+		log.info("Predmet 20004L -> {}",p.toString());
+		
+		repo.deleteById(203);
+>>>>>>> master
 		
 
 		//repo.delete(20003L);

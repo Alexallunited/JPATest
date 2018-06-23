@@ -20,16 +20,26 @@ public class PredmetRepositoryTest {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	PredmetRepository pr;
+<<<<<<< HEAD
 
+=======
+	/*
+>>>>>>> master
 	@Test
 	public void findByIDTest() {
 		logger.info("Started ID Test");
 		Predmet p = pr.findByID(20001);
 		assertEquals("Ime1", p.getIme());
+<<<<<<< HEAD
 		assertEquals("Opis1", p.getOpis());
 	}
 	
 	
 	
 	
+=======
+		assertEquals("Opi1", p.getOpis());
+	}*/
+
+>>>>>>> master
 }
